@@ -1,0 +1,121 @@
+// config vars
+
+@import 'client/less/reset.import.less';
+@import 'client/less/p.import.less';
+@import 'client/less/hr.import.less';
+@import 'client/less/auticon.import.less';
+
+body {
+  font-size: 1.2em;
+}
+
+li+li {
+  margin-top: .3em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h1:first-of-type {
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h2+hr+* {
+  margin-top: 2.5em;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 1.5em 0 .5em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: .8em;
+}
+
+h6 {
+  font-size: .7em;
+}
+
+@quote-bg: #999;
+@quote-fg: #333;
+
+.quote() {
+  color: @quote-bg;
+  font-family: 'FontAwesome';
+  content: '\f10d  ';
+}
+
+blockquote {
+  color: @quote-fg;
+  margin: 2.5em 1em 2.5em 0em;
+  padding: 1em 1em 1em .5em;
+  border-left: .5em solid @quote-bg;
+  text-indent: 2em;
+}
+
+blockquote::before {
+  .quote;
+  content: '\f10d  ';
+  font-size: 1em;
+  float: left;
+  margin: 0 -1em 0 0;
+  line-height: .9em;
+}
+
+q::before, q::after {
+  .quote;
+  font-size: .3em;
+  text-align: top;
+  display: inline-block;
+  height: 0;
+  margin: -2.7em 0 2.7em;
+}
+
+q::before {
+  margin-right: .3em;
+}
+
+q::after {
+  content: '\f10e  ';
+  margin-left: .3em;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+ins::before {
+  content: "^  ";
+  vertical-align: top;
+  display: inline-block;
+  margin: .9em .3em 0 -.3em;
+  font-size: .8em;
+  width: 0;
+  height: 0;
+}
+
+code {
+  font-family: 'Menlo', Courier, monospace;
+  font-size: .9em;
+}

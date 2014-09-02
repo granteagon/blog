@@ -1,0 +1,31 @@
+
+a::before, a::after {
+  font-weight: normal !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.auticon() {
+  display: inline-block;
+  margin-right: .2em;
+}
+
+[href^="https"]:before {
+  font-family: 'FontAwesome';
+  content: '\f023  ';
+  .auticon;
+}
+
+// sited
+cite a:before, cite [href^="https"]:before {
+  font-family: 'FontAwesome';
+  content: '\f0c6  ';
+}
+
+// email
+[href^="mailto"]:before {
+  font-family: 'FontAwesome';
+  content: '\f003  ';
+  .auticon;
+}
+
